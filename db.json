@@ -1,0 +1,11 @@
+{
+  "posts": [
+    {
+      "id": "9c7cff1f-d80d-4db8-8b20-d84204df2edc",
+      "date": "2023-11-08T18:23:20.469Z",
+      "user": "Ali",
+      "title": "React",
+      "text": "React da redux kullanımı\n"
+    }
+  ]
+}
