@@ -6,6 +6,13 @@
       "user": "Ali",
       "title": "React",
       "text": "React da redux kullanımı\n"
+    },
+    {
+      "id": "cc634376-7f45-47b5-a54b-334fd2bf43cb",
+      "date": "2023-11-10T08:31:58.013Z",
+      "user": "Ahmet",
+      "title": "React Mvc Yapısı",
+      "text": "Mvc yapısı görünütü ve kontrol kodlarının ayrı ayrı bileşenlerde yazılarak modüler bir yapı oluşturmasıdır."
     }
   ]
 }

@@ -1,8 +1,9 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import PopView from '../../components/Popup/PopView'
+import PopupController from '../../components/Popup/PopupController'
 
-const ListPostView = ({postData,setShowPopup,showPopup}) => {
+const ListPostView = ({postData,setShowPopup,showPopup,userName,setUserName}) => {
    
   return (
     <div className='container'>
@@ -11,7 +12,10 @@ const ListPostView = ({postData,setShowPopup,showPopup}) => {
                     <div className='post'>
                         <div className='info'>
                             <h3> {post.title} </h3>
-                            <p> {post.user} </p>
+                            <p onClick={()=>{ 
+                                setShowPopup(true)
+                                setUserName(post.user)
+                                }}> {post.user} </p>
                         </div>
                         <p className='text'> {post.text} </p>
                     </div>
@@ -19,7 +23,7 @@ const ListPostView = ({postData,setShowPopup,showPopup}) => {
             }
        
         
-        {showPopup && <PopView/>}
+        {showPopup && <PopupController setShowPopup= {setShowPopup} userName = {userName} />}
         
      </div>
   )

@@ -19,7 +19,7 @@ const AddPostView = ({handleSubmit, onInputChange}) => {
     <fieldset>
       <label htmlFor="">Açıklama</label>
       <textarea onChange={(e)=> onInputChange('text', e )}
-       type='text' placeholder='Açıklama Giriniz' maxLength={100}></textarea>
+       type='text' placeholder='Açıklama Giriniz' ></textarea>
     </fieldset>
     <button>Gönder</button>
    </form>

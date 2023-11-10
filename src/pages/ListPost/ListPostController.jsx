@@ -6,7 +6,8 @@ import React, { useEffect, useState } from 'react'
 const ListPostController = () => {
 
     const [postData,setPostData] =useState(null);
-    const [showPopup,setShowPopup]=useState(true);
+    const [showPopup,setShowPopup]=useState(false);
+    const [userName,setUserName] = useState('')
 
 
     useEffect(()=>{
@@ -14,7 +15,7 @@ const ListPostController = () => {
         .then((res)=> setPostData(res.data))
     },[])
   return (
-  <ListPostView postData={postData} setShowPopup={setShowPopup} showPopup={showPopup}/>
+  <ListPostView postData={postData} setShowPopup={setShowPopup} showPopup={showPopup} userName={userName} setUserName={setUserName} />
   )
 }
 

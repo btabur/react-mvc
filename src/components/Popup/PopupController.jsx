@@ -1,10 +1,18 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import PopView from './PopView'
+import axios from 'axios'
 
 
-const PopupController = () => {
+const PopupController = ({setShowPopup,userName}) => {
+  const [userPost,setUserPost] = useState([])
+
+  useEffect(()=> {
+    axios.get(` http://localhost:3001/posts?user=${userName}`)
+    .then(res =>setUserPost(res.data))
+  },[])
+
   return (
-  <PopView/>
+  <PopView setShowPopup={setShowPopup} userName = {userName} userPost = {userPost}/>
   )
 }
 
